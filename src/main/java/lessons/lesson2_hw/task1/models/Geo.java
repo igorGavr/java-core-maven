@@ -1,5 +1,4 @@
-package lesson2.task3.models;
-
+package lessons.lesson2_hw.task1.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -8,10 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-
-public class Car {
-    private String model;
-    private int year;
-    private  int power;
-
+public class Geo {
+    String lat;
+    private String lng;
 }

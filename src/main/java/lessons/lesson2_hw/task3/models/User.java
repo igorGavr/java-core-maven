@@ -1,6 +1,6 @@
-package lesson2.task3.models;
+package lessons.lesson2_hw.task3.models;
 
-import lesson2.task3.enums.Gender;
+import lessons.lesson2_hw.task3.enums.Gender;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

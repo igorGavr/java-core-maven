@@ -1,7 +1,7 @@
-package lesson2.task2.models;
+package lessons.lesson2_hw.task2.models;
 
 
-import lesson2.task2.enums.CpuEnum;
+import lessons.lesson2_hw.task2.enums.CpuEnum;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

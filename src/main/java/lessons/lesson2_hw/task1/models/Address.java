@@ -1,4 +1,4 @@
-package lesson2.task1.models;
+package lessons.lesson2_hw.task1.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

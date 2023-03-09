@@ -1,8 +1,8 @@
-package lesson2.task1;
+package lessons.lesson2_hw.task1;
 
-import lesson2.task1.models.User;
-import lesson2.task1.models.Address;
-import lesson2.task1.models.Company;
+import lessons.lesson2_hw.task1.models.User;
+import lessons.lesson2_hw.task1.models.Address;
+import lessons.lesson2_hw.task1.models.Company;
 
 public class Main {
     public static void main(String[] args) {

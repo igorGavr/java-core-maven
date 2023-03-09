@@ -1,8 +1,8 @@
-package lesson2.task3;
+package lessons.lesson2_hw.task3;
 
-import lesson2.task3.enums.Gender;
-import lesson2.task3.models.Skill;
-import lesson2.task3.models.User;
+import lessons.lesson2_hw.task3.enums.Gender;
+import lessons.lesson2_hw.task3.models.Skill;
+import lessons.lesson2_hw.task3.models.User;
 
 import java.util.ArrayList;
 
