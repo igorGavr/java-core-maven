@@ -33,6 +33,5 @@ public class Main {
         for (Post post : posts) {
             System.out.println(post);
         };
-
     }
 }
