@@ -22,4 +22,13 @@ class Student extends Human{
                 "group='" + group + '\'' +
                 "} " + super.toString();
     }
+
+    @Override
+    public void fooHuman() {
+        System.out.println(" hi from Student");
+    }
+
+    public void foo() {
+
+    }
 }

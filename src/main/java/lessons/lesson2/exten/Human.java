@@ -37,8 +37,10 @@ public class Human {
     }
 
     public void fooHuman() {
-
+        System.out.println("foo");
     }
+
+
 }
 
 
