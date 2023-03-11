@@ -6,7 +6,6 @@ import lombok.ToString;
 public class Main {
     public static void main(String[] args) {
         Animal animal = new Animal() {
-
             @Override
             public void scream() {
                 System.out.println("as");
@@ -37,17 +36,13 @@ abstract class Animal {
 @ToString(callSuper = true)
 class Horse extends Animal {
     private String breed;
-
     public Horse() {
     }
-
     public Horse(int legs, boolean brain, String breed) {
         super(legs, brain);
         this.breed = breed;
     }
-
     @Override
     public void scream() {
-
     }
 }
