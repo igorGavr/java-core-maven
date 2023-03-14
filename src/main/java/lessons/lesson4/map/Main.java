@@ -1,6 +1,7 @@
 package lessons.lesson4.map;
 
 import java.util.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Main {
@@ -45,6 +46,19 @@ public class Main {
         }
 
         System.out.println(map);
+
+
+        ArrayList<User> users = new ArrayList<>();
+        users.add(new User("urik", 23));
+        users.add(new User("ziat", 25));
+        users.add(new User("ya", 25));
+
+        users.stream()
+                .distinct()
+                .map(user -> new CutedUser(user.getName()))
+                .collect(Collectors.toList())
+                .forEach(System.out::println);
+
 
     }
 }

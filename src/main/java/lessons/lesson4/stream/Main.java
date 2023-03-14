@@ -50,12 +50,7 @@ public class Main {
                 .collect(Collectors.toList());
         System.out.println(collect);
 
-        boolean b = collect.stream().allMatch(new Predicate<Integer>() {
-            @Override
-            public boolean test(Integer integer) {
-                return false;
-            }
-        });
+        boolean b = collect.stream().allMatch(integer -> false);
         System.out.println(b);
 
         Optional<Integer> max = collect.stream().max((o1, o2) -> o1 - o2);
