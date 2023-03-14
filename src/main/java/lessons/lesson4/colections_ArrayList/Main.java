@@ -10,6 +10,8 @@ public class Main {
         ArrayList<Integer> integers = new ArrayList<>();
         integers.add(1);
         integers.add(2);
+        integers.add(1, 2);
+        integers.set(2, 12);
         integers.add(3);
         System.out.println(integers);
         Integer integer = integers.get(1);
@@ -41,6 +43,23 @@ public class Main {
             if (next % 2 != 0)
                 iterator.remove();
         }
+        System.out.println(integers);
+
+        ArrayList<Integer> integers2 = new ArrayList<>();
+        integers2.add(1);
+        integers2.add(2);
+
+        integers.addAll(integers2);
+        System.out.println(integers);
+
+        ArrayList<Integer> integers3 = new ArrayList<>();
+        integers3.add(1);
+        integers3.add(2);
+        integers.removeAll(integers3);
+        System.out.println(integers);
+
+        integers2.removeIf(s -> s.equals(2));
+        System.out.println(integers2);
 
 
     }
