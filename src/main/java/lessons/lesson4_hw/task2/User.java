@@ -11,7 +11,7 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @Getter
 @Setter
-public class User {
+public class User implements Comparable<User> {
     private int id;
     private String name;
     private String email;
@@ -21,5 +21,8 @@ public class User {
     private Car car;
 
 
-
+    @Override
+    public int compareTo(User o) {
+        return -o.getSkills().size();
+    }
 }
