@@ -23,6 +23,10 @@ public class User implements Comparable<User> {
 
     @Override
     public int compareTo(User o) {
-        return -o.getSkills().size();
+        int i = this.skills.size() - o.getSkills().size();
+        if (i == 0) {
+            return 1;
+        }
+        return i;
     }
 }
