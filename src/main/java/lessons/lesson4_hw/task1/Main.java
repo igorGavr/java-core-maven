@@ -28,10 +28,13 @@ public class Main {
 
 
         ArrayList<String> strings = new ArrayList<>();
-        strings.add("ad");
-        strings.add("dsd");
-        strings.add("cadss");
-        Collections.sort(strings);
+        strings.add("b");
+        strings.add("c");
+        strings.add("a");
+//        Collections.sort(strings);
+        strings.sort(String::compareTo);
         System.out.println(strings);
+
+
     }
 }
