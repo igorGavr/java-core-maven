@@ -91,9 +91,9 @@ public class School {
     }
 
     private void deleteStudentFromSchool() {
-        System.out.print("Введіть ім'я тваринки: ");
+        System.out.print("Input student name: ");
         String name = this.in.next();
-        System.out.print("Введіть тип тваринки: ");
+        System.out.print("Input student rating: ");
         String rating = this.in.next();
         final Student student = new Student(name, rating);
         this.school.values().forEach(teacher -> teacher.removeIf(student1 -> student1.equals(student)));
@@ -106,17 +106,17 @@ public class School {
 
     public void menu() {
         while (true) {
-            System.out.println("1) додати вчителя в школу");
-            System.out.println("2) додати студента до вчителя.");
-            System.out.println("3) видалити студента з групи вчителя.");
-            System.out.println("4) видалити вчителя .");
-            System.out.println("5) видалити студента зі школи.");
-            System.out.println("6) вивести на екран школу.");
-            System.out.println("9) Вихід.");
+            System.out.println("1) add teacher to school");
+            System.out.println("2) add student to teacher.");
+            System.out.println("3) delete student from teacher group.");
+            System.out.println("4) delete teacher.");
+            System.out.println("5) delete student from school.");
+            System.out.println("6) show school.");
+            System.out.println("9) exit.");
 
             System.out.println();
 
-            System.out.print("Зробіть свій вибір: ");
+            System.out.print("Make your choice: ");
             String choice = this.in.next();
 
             switch (choice) {

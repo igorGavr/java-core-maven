@@ -122,7 +122,7 @@ public class ZooClub {
             System.out.println("4) видалити учасника клубу.");
             System.out.println("5) видалити конкретну тваринку з усіх власників.");
             System.out.println("6) вивести на екран зооклуб.");
-            System.out.println("9) Вихід.");
+            System.out.println("9) exit.");
 
             System.out.println();
 
