@@ -16,6 +16,7 @@ public class StaticVar {
     public void checkB() {
         System.out.println(b);
     }
+
     public static void print() {
 //        System.out.println(b); // error
         System.out.println(a);
