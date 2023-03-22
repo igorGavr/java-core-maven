@@ -7,7 +7,7 @@ import lombok.ToString;
 import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
-import java.sql.Date;
+import java.util.Date;
 
 @Entity
 @Table(name = "actor")
@@ -19,6 +19,8 @@ public class Actor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    private int actor_id;
 
 
     private String first_name;

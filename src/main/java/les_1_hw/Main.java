@@ -17,7 +17,7 @@ public class Main {
                 .build();
 
         Metadata metadata = new MetadataSources(serviceRegistry)
-                .addAnnotatedClass(User.class)
+                .addAnnotatedClass(Actor.class)
                 .getMetadataBuilder()
                 .build();
 
@@ -30,9 +30,9 @@ public class Main {
         session.getTransaction().commit();
 
         session
-                .createQuery("from Actor xxx where xxx.id>0", Actor.class)
+                .createQuery("select a from Actor a where a.first_name='BELA'", Actor.class)
                 .getResultList()
-                .forEach(actor1 -> System.out.println(actor1));
+                .forEach(System.out::println);
 
         session.close();
         sessionFactory.close();
