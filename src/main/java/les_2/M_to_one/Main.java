@@ -33,15 +33,26 @@ public class Main {
 
         session.beginTransaction();
 
-        final Card card1 = new Card("1", new User("chapi"));
-        final Card card2 = new Card("2", new User("chapi"));
-        session.save(card1);
-        session.save(card2);
+        final User da = new User("da");
+        final Card card1 = new Card("123", da);
+        final Card card2 = new Card("123", da);
+//        session.save(da);
+//        session.save(card1);
+//        session.save(card2);
 
-        session
-                .createQuery("select xxx from User xxx where xxx.id>0", User.class)
-                .getResultList()
-                .forEach(System.out::println);
+        final User user = session.find(User.class, 8L);
+        System.out.println(user);
+
+
+        final Card card = session.find(Card.class, 1);
+        System.out.println(card);
+        System.out.println(card.getUser());
+
+
+//        session
+//                .createQuery("select xxx from User xxx where xxx.id>0", User.class)
+//                .getResultList()
+//                .forEach(System.out::println);
 
 
         session.getTransaction().commit();

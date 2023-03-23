@@ -45,11 +45,9 @@ public class User {
     private Date lastUpdate;
 
 
-    public User(String name, Passport passport, List<String> skills, Gender gender) {
+    public User(String name, Passport passport) {
         this.name = name;
         this.passport = passport;
-        this.skills = skills;
-        this.gender = gender;
     }
 
     public User(String name) {
