@@ -23,18 +23,18 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @Column(name = "user_name")
+    private String name;
+
     @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     @JoinColumn(name = "passport_id", referencedColumnName = "id")
     private Passport passport;
-
-    @Column(name = "user_name")
-    private String name;
 
     @ElementCollection(fetch = FetchType.LAZY)
     private List<String> skills = new ArrayList<>();
 
     @Enumerated(value = EnumType.STRING)
-    private Gender gender;
+    private Gender gender = Gender.MALE;
 
     @Temporal(TemporalType.TIMESTAMP)
     @CreationTimestamp
@@ -47,6 +47,17 @@ public class User {
         this.name = name;
         this.skills = skills;
         this.gender = gender;
+    }
+
+
+    public User(String name, Passport passport, Gender gender) {
+        this.name = name;
+        this.passport = passport;
+        this.gender = gender;
+    }
+
+    public User(String name) {
+        this.name = name;
     }
 
 
