@@ -12,6 +12,7 @@ import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 
 import java.util.ArrayList;
 
+
 public class Main {
     public static void main(String[] args) {
 
@@ -37,20 +38,26 @@ public class Main {
 //
 //        final User user = new User("sdfa", new Passport("sdafdsf"), Gender.MALE);
 //        session.save(user);
-
+//
 //        Passport passport = new Passport("176r36yfd1yhe8re");
 //        session.save(passport);
-//        User user = new User("abrikos");
+//        User user2 = new User("abrikos");
 //        session.save(user);
-
-//        User user2 = session.find(User.class, 2L);
+//
+//        User user3 = session.find(User.class, 2L);
 //        Passport passport2 = session.find(Passport.class, 2);
 //        user2.setPassport(passport2);
 
+//        final User user = session.find(User.class, 1L);
+//        System.out.println(user.getPassport());
 
-        session.createQuery("from User u", User.class)
-                        .getResultList()
-                                .forEach(System.out::println);
+        final Passport passport = session.find(Passport.class, 1);
+        System.out.println(passport.getSeries());
+
+
+//        session.createQuery("from User u", User.class)
+//                        .getResultList()
+//                                .forEach(System.out::println);
 
 
         session.getTransaction().commit();
