@@ -20,11 +20,10 @@ public class Actor {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int actor_id;
 
-
     private String first_name;
-
 
     private String last_name;
 
@@ -36,4 +35,6 @@ public class Actor {
         this.first_name = first_name;
         this.last_name = last_name;
     }
+
+
 }

@@ -26,6 +26,8 @@ public class Main {
 
         session.beginTransaction();
 // тут запити
+        final Actor actor = new Actor("as", "dafdsf");
+        session.save(actor);
 
         session.getTransaction().commit();
 
