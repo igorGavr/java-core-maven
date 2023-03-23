@@ -1,4 +1,4 @@
-package les_2.one_to_M.entity;
+package les_2.one_to_one_Bi.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;

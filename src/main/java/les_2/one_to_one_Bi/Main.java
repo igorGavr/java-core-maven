@@ -1,17 +1,13 @@
-package les_2.one_to_M;
+package les_2.one_to_one_Bi;
 
-import les_2.one_to_M.entity.Car;
-import les_2.one_to_M.entity.Passport;
-import les_2.one_to_one.entity.Gender;
-import les_2.one_to_M.entity.User;
+import les_2.one_to_one_Bi.entity.Passport;
+import les_2.one_to_one_Bi.entity.User;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
-
-import java.util.ArrayList;
 
 
 public class Main {
@@ -24,7 +20,6 @@ public class Main {
         Metadata metadata = new MetadataSources(serviceRegistry)
                 .addAnnotatedClass(User.class)
                 .addAnnotatedClass(Passport.class)
-                .addAnnotatedClass(Car.class)
                 .getMetadataBuilder()
                 .build();
 
@@ -32,11 +27,17 @@ public class Main {
         Session session = sessionFactory.openSession();
 
         session.beginTransaction();
-        final ArrayList<Car> cars = new ArrayList<>();
-        cars.add(new Car("bmw"));
-        cars.add(new Car("zapor"));
-        final User pop = new User("pop", cars);
-        session.save(pop);
+
+        final Passport passport = session.find(Passport.class, 1);
+        System.out.println(passport.getUser());
+//        final User user = session.find(User.class, 1L);
+//        passport.setUser(user);
+//        System.out.println(passport);
+
+//        final User user = session.find(User.class, 1L);
+////        user.setPassport(passport);
+//        System.out.println(user);
+//        System.out.println(user.getPassport());
 
 //        session.createQuery("from User u", User.class)
 //                        .getResultList()

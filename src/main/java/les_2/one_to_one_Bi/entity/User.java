@@ -1,4 +1,4 @@
-package les_2.one_to_M.entity;
+package les_2.one_to_one_Bi.entity;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -31,13 +31,6 @@ public class User {
     @ToString.Exclude
     private Passport passport;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinTable(
-            name = "user_car",
-            joinColumns = @JoinColumn(name = "user_id_x"),
-            inverseJoinColumns = @JoinColumn(name = "car_id_x")
-    )
-    private List<Car> cars = new ArrayList<>();
 
     @ElementCollection(fetch = FetchType.LAZY)
     private List<String> skills = new ArrayList<>();
@@ -65,10 +58,7 @@ public class User {
         this.gender = gender;
     }
 
-    public User(String name, List<Car> cars) {
-        this.name = name;
-        this.cars = cars;
-    }
+
 
     public User(String name) {
         this.name = name;
