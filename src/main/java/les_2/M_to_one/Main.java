@@ -33,18 +33,20 @@ public class Main {
 
         session.beginTransaction();
 
-        final User da = new User("da");
-        final Card card1 = new Card("123", da);
-        final Card card2 = new Card("123", da);
-//        session.save(da);
-//        session.save(card1);
-//        session.save(card2);
+        final User re = new User("re");
+        final Card card1 = new Card("22", re);
+        final Card card2 = new Card("22", re);
+        session.save(re);
+        session.save(card1);
+        session.save(card2);
 
-        final User user = session.find(User.class, 8L);
+        final User user = session.find(User.class, 1L);
         System.out.println(user);
+//        System.out.println(user.getCards());  // error
 
+        System.out.println("&*&*&*&*&*&*");
 
-        final Card card = session.find(Card.class, 1);
+        final Card card = session.find(Card.class, 2);
         System.out.println(card);
         System.out.println(card.getUser());
 
