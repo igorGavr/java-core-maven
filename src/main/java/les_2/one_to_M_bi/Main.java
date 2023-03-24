@@ -31,15 +31,20 @@ public class Main {
         Session session = sessionFactory.openSession();
 
         session.beginTransaction();
-        final ArrayList<Car> cars = new ArrayList<>();
-        cars.add(new Car("bmw"));
-        cars.add(new Car("zapor"));
-        final User pop = new User("pop", cars);
-        session.save(pop);
 
-        final Car car5 = session.find(Car.class, 5);
-        System.out.println(car5);
-        System.out.println(car5.getUser());
+//        final ArrayList<Car> cars = new ArrayList<>();
+//        cars.add(new Car("bmw"));
+//        cars.add(new Car("zapor"));
+//        final User pop = new User("pop", cars);
+//        session.save(pop);
+
+        final Car car1 = session.find(Car.class, 1);
+        System.out.println(car1);
+        System.out.println(car1.getUser());
+        System.out.println("^&^&^&^&^&^&^");
+        final User user = session.find(User.class, 1L);
+        System.out.println(user);
+        System.out.println(user.getCars());
 
 //        session.createQuery("from User u", User.class)
 //                        .getResultList()
